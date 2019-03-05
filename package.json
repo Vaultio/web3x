@@ -28,6 +28,7 @@
   "types": "./index.d.ts",
   "sideEffects": false,
   "scripts": {
+    "prepare": "yarn clean && tsc -p tsconfig.cjs.json && tsc -p tsconfig.es.json && node ./package.js",
     "build": "yarn clean && tsc -p tsconfig.cjs.json && tsc -p tsconfig.es.json && node ./package.js",
     "lint": "tslint --project tsconfig.json 'src/**/*.ts' --fix",
     "test": "jest",
